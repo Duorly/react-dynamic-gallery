@@ -4,4 +4,5 @@ export type CarItem = {
     category: string;
     src: string;
     likes: number;
+    dislikes: number;
 };

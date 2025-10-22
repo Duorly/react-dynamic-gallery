@@ -1,19 +1,28 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Card from './Card';
 import FilterBar from './FilterBar';
-import type {CarItem} from "../types";
+import type { CarItem } from "../types";
 
 type Props = {
     initialData: CarItem[];
 };
 
 export const Gallery: React.FC<Props> = ({ initialData }) => {
+    // Normalisation des données (évite NaN sur likes/dislikes)
+    const normalize = (list: CarItem[]) =>
+        list.map(c => ({
+            ...c,
+            likes: c.likes ?? 0,
+            dislikes: c.dislikes ?? 0,
+        }));
+
     const [cars, setCars] = useState<CarItem[]>(() => {
         try {
             const raw = localStorage.getItem('autopulse_cars');
-            return raw ? (JSON.parse(raw) as CarItem[]) : initialData;
+            const data = raw ? (JSON.parse(raw) as CarItem[]) : initialData;
+            return normalize(data);
         } catch {
-            return initialData;
+            return normalize(initialData);
         }
     });
 
@@ -32,14 +41,22 @@ export const Gallery: React.FC<Props> = ({ initialData }) => {
         return filter === 'All' ? cars : cars.filter((c) => c.category === filter);
     }, [cars, filter]);
 
+    // Gestion des likes
     const handleLike = (id: string) => {
-        setCars((prev) => prev.map((c) => (c.id === id ? { ...c, likes: c.likes + 1 } : c)));
+        setCars(prev =>
+            prev.map(c =>
+                c.id === id ? { ...c, likes: (c.likes ?? 0) + 1 } : c
+            )
+        );
     };
 
-    const handleDelete = (id: string) => {
-        if (confirm('Supprimer cette carte ?')) {
-            setCars((prev) => prev.filter((c) => c.id !== id));
-        }
+    // Gestion des dislikes
+    const handleDislike = (id: string) => {
+        setCars(prev =>
+            prev.map(c =>
+                c.id === id ? { ...c, dislikes: (c.dislikes ?? 0) + 1 } : c
+            )
+        );
     };
 
     return (
@@ -48,10 +65,17 @@ export const Gallery: React.FC<Props> = ({ initialData }) => {
 
             <section className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
                 {visible.length === 0 ? (
-                    <p className="text-center text-gray-400 col-span-full">Aucune carte correspondante</p>
+                    <p className="text-center text-gray-400 col-span-full">
+                        No matching cars found
+                    </p>
                 ) : (
                     visible.map((car) => (
-                        <Card key={car.id} car={car} onLike={handleLike} onDelete={handleDelete} />
+                        <Card
+                            key={car.id}
+                            car={car}
+                            onLike={handleLike}
+                            onDislike={handleDislike}
+                        />
                     ))
                 )}
             </section>
