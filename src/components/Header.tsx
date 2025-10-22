@@ -1,13 +1,24 @@
 import React from 'react';
+import logo from '../assets/images/Logo/logo_auto_pulse.png';
 
 export const Header: React.FC = () => {
     return (
         <header className="text-center py-12">
-            <h1 className="text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 drop-shadow">
-                AutoPulse
-            </h1>
-            <p className="text-gray-400 mt-3 text-lg">Where motion meets emotion — explore the art of automotive design.</p>
+            <div className="flex flex-col justify-center items-center">
+                <img
+                    src={logo}
+                    alt="AutoPulse Logo"
+                    className="w-20 h-20 object-contain drop-shadow-lg mb-0"
+                />
+                <h1 className="text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 drop-shadow -mt-1">
+                    AutoPulse
+                </h1>
+            </div>
+            <p className="text-gray-400 mt-3 text-lg">
+                Where motion meets emotion — explore the art of automotive design.
+            </p>
         </header>
     );
 };
+
 export default Header;
