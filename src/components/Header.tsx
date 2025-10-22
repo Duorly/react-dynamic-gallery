@@ -1,17 +1,17 @@
 import React from 'react';
-import logo from '../assets/images/Logo/logo_auto_pulse.png';
+import {DEFAULT_CONFIG} from "../utils/constants.ts";
 
 export const Header: React.FC = () => {
     return (
         <header className="text-center py-12">
             <div className="flex flex-col justify-center items-center">
                 <img
-                    src={logo}
+                    src="/assets/images/Logo/logo_auto_pulse.png"
                     alt="AutoPulse Logo"
-                    className="w-20 h-20 object-contain drop-shadow-lg mb-0"
+                    className="w-24 object-contain drop-shadow-lg mb-0"
                 />
                 <h1 className="text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 drop-shadow -mt-1">
-                    AutoPulse
+                    {DEFAULT_CONFIG.AppName}
                 </h1>
             </div>
             <p className="text-gray-400 mt-3 text-lg">

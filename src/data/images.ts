@@ -1,13 +1,13 @@
-import type {Image} from "../utils/type.ts";
+import type {CarItem} from "../types";
 
-export const images: Image[] = [
+export const images: CarItem[] = [
     {
         id: 'img-1',
         title: 'Hyundai',
         category: 'Citadine',
         src: '/assets/images/01.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-2',
@@ -15,7 +15,7 @@ export const images: Image[] = [
         category: 'Sportive',
         src: '/assets/images/02.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-3',
@@ -23,7 +23,7 @@ export const images: Image[] = [
         category: 'Supercar',
         src: '/assets/images/03.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-4',
@@ -31,7 +31,7 @@ export const images: Image[] = [
         category: 'Berline compact',
         src: '/assets/images/04.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-5',
@@ -39,7 +39,7 @@ export const images: Image[] = [
         category: 'Sportive',
         src: '/assets/images/05.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-6',
@@ -47,7 +47,7 @@ export const images: Image[] = [
         category: 'Americaine',
         src: '/assets/images/06.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-7',
@@ -55,7 +55,7 @@ export const images: Image[] = [
         category: 'Americaine',
         src: '/assets/images/07.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-8',
@@ -63,7 +63,7 @@ export const images: Image[] = [
         category: 'Americaine',
         src: '/assets/images/08.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-9',
@@ -71,7 +71,7 @@ export const images: Image[] = [
         category: 'Supercar',
         src: '/assets/images/09.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-10',
@@ -79,7 +79,7 @@ export const images: Image[] = [
         category: 'Supercar',
         src: '/assets/images/10.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-11',
@@ -87,7 +87,7 @@ export const images: Image[] = [
         category: 'Supercar',
         src: '/assets/images/11.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-12',
@@ -95,7 +95,7 @@ export const images: Image[] = [
         category: 'Sportive',
         src: '/assets/images/12.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-13',
@@ -103,7 +103,7 @@ export const images: Image[] = [
         category: 'Berline',
         src: '/assets/images/13.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-14',
@@ -111,7 +111,7 @@ export const images: Image[] = [
         category: 'Berline',
         src: '/assets/images/14.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-15',
@@ -119,7 +119,7 @@ export const images: Image[] = [
         category: 'Supercar',
         src: '/assets/images/15.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-16',
@@ -127,7 +127,7 @@ export const images: Image[] = [
         category: 'Americaine',
         src: '/assets/images/16.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-17',
@@ -135,7 +135,7 @@ export const images: Image[] = [
         category: 'Sportive',
         src: '/assets/images/17.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-18',
@@ -143,7 +143,7 @@ export const images: Image[] = [
         category: 'Americaine',
         src: '/assets/images/18.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-19',
@@ -151,7 +151,7 @@ export const images: Image[] = [
         category: 'Supercar',
         src: '/assets/images/19.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
     {
         id: 'img-20',
@@ -159,7 +159,7 @@ export const images: Image[] = [
         category: 'Hypercar',
         src: '/assets/images/20.jpg',
         likes: 0,
-        createdAt: '2024-06-01T08:30:00.000Z',
+        dislikes: 0,
     },
 ];
 
