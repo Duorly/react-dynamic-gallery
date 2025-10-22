@@ -6,7 +6,7 @@ export const Header: React.FC = () => {
         <header className="text-center py-12">
             <div className="flex flex-col justify-center items-center">
                 <img
-                    src="/assets/images/Logo/logo_auto_pulse.png"
+                    src="/assets/images/logo/logo_auto_pulse.png"
                     alt="AutoPulse Logo"
                     className="w-24 object-contain drop-shadow-lg mb-0"
                 />
