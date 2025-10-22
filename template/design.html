@@ -1,129 +1,128 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Galerie Modern Zen ✨</title>
+  <title>AutoPulse — The Interactive Car Gallery</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gradient-to-br from-rose-50 via-white to-sky-50 min-h-screen text-gray-800 font-sans antialiased selection:bg-rose-100">
+<body class="bg-gradient-to-br from-slate-950 via-gray-900 to-slate-900 min-h-screen text-gray-100 font-sans antialiased selection:bg-cyan-500/30">
+
   <!-- HEADER -->
   <header class="text-center py-12">
-    <h1 class="text-5xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-500 to-rose-400 drop-shadow-sm">
-      Galerie Modern Zen
+    <h1 class="text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 drop-shadow">
+      AutoPulse
     </h1>
-    <p class="text-gray-500 mt-3 text-lg">De l’équilibre, de la douceur, et une touche de design moderne.</p>
+    <p class="text-gray-400 mt-3 text-lg">Where motion meets emotion — explore the art of automotive design.</p>
   </header>
 
   <main class="max-w-7xl mx-auto px-4 relative">
-    <!-- BARRE DE FILTRE FLOTTANTE -->
-    <div class="sticky top-4 z-10 flex flex-wrap justify-center gap-3 mb-12 backdrop-blur-md bg-white/60 border border-white/40 shadow-sm px-4 py-3 rounded-full">
-      <button class="px-4 py-2 rounded-full bg-gradient-to-r from-rose-400 to-pink-400 text-white font-semibold shadow hover:scale-105 transition">Toutes</button>
-      <button class="px-4 py-2 rounded-full bg-white/70 border border-gray-200 text-gray-700 hover:bg-rose-100 transition">Nature</button>
-      <button class="px-4 py-2 rounded-full bg-white/70 border border-gray-200 text-gray-700 hover:bg-rose-100 transition">Voyage</button>
-      <button class="px-4 py-2 rounded-full bg-white/70 border border-gray-200 text-gray-700 hover:bg-rose-100 transition">Art</button>
-      <button class="px-4 py-2 rounded-full bg-white/70 border border-gray-200 text-gray-700 hover:bg-rose-100 transition">Architecture</button>
-      <button class="px-4 py-2 rounded-full bg-white/70 border border-gray-200 text-gray-700 hover:bg-rose-100 transition">Animaux</button>
+    <!-- FILTER BAR -->
+    <div class="sticky top-4 z-10 flex flex-wrap justify-center gap-3 mb-12 backdrop-blur-md bg-white/5 border border-white/10 shadow-sm px-4 py-3 rounded-full">
+      <button class="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold shadow hover:scale-105 transition">
+        All
+      </button>
+      <button class="px-4 py-2 rounded-full bg-slate-800/70 border border-slate-700 text-gray-200 hover:bg-cyan-900/40 transition">
+        Supercars
+      </button>
+      <button class="px-4 py-2 rounded-full bg-slate-800/70 border border-slate-700 text-gray-200 hover:bg-cyan-900/40 transition">
+        Classics
+      </button>
+      <button class="px-4 py-2 rounded-full bg-slate-800/70 border border-slate-700 text-gray-200 hover:bg-cyan-900/40 transition">
+        Electric
+      </button>
+      <button class="px-4 py-2 rounded-full bg-slate-800/70 border border-slate-700 text-gray-200 hover:bg-cyan-900/40 transition">
+        Sport
+      </button>
+      <button class="px-4 py-2 rounded-full bg-slate-800/70 border border-slate-700 text-gray-200 hover:bg-cyan-900/40 transition">
+        Luxury
+      </button>
     </div>
 
-    <!-- GALERIE -->
+    <!-- GALLERY -->
     <section class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
-      <!-- Exemple de carte -->
-      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-105">
-        <img src="https://picsum.photos/500/700?random=1" alt="Nature" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 group-hover:opacity-80 transition"></div>
+      <!-- CARD TEMPLATE -->
+      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-slate-900 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-110">
+        <img src="https://picsum.photos/seed/car1/500/700" alt="Supercar" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
         <div class="absolute bottom-0 w-full p-5 flex justify-between items-end">
           <div>
-            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow-sm">Cascade mystique</h3>
-            <p class="text-white/70 text-sm">Nature</p>
+            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow">Lamborghini Aventador</h3>
+            <p class="text-gray-400 text-sm">Supercar</p>
           </div>
-          <div class="flex items-center gap-1 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">
-            <span class="text-rose-500 text-lg leading-none">❤️</span>
-            <span class="text-gray-700 font-medium like-count">124</span>
+          <div class="flex items-center gap-1 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm border border-white/10">
+            <span class="text-cyan-400 text-lg leading-none">❤️</span>
+            <span class="text-gray-200 font-medium like-count">240</span>
           </div>
         </div>
       </div>
 
-      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-105">
-        <img src="https://picsum.photos/500/650?random=2" alt="Voyage" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 group-hover:opacity-80 transition"></div>
+      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-slate-900 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-110">
+        <img src="https://picsum.photos/seed/car2/500/650" alt="Classic" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
         <div class="absolute bottom-0 w-full p-5 flex justify-between items-end">
           <div>
-            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow-sm">Route dorée</h3>
-            <p class="text-white/70 text-sm">Voyage</p>
+            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow">Ford Mustang 1969</h3>
+            <p class="text-gray-400 text-sm">Classic</p>
           </div>
-          <div class="flex items-center gap-1 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">
-            <span class="text-rose-500 text-lg leading-none">❤️</span>
-            <span class="text-gray-700 font-medium like-count">86</span>
+          <div class="flex items-center gap-1 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm border border-white/10">
+            <span class="text-cyan-400 text-lg leading-none">❤️</span>
+            <span class="text-gray-200 font-medium like-count">186</span>
           </div>
         </div>
       </div>
 
-      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-105">
-        <img src="https://picsum.photos/500/600?random=3" alt="Art" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 group-hover:opacity-80 transition"></div>
+      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-slate-900 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-110">
+        <img src="https://picsum.photos/seed/car3/500/600" alt="Electric" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
         <div class="absolute bottom-0 w-full p-5 flex justify-between items-end">
           <div>
-            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow-sm">Lumières d’atelier</h3>
-            <p class="text-white/70 text-sm">Art</p>
+            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow">Tesla Model S Plaid</h3>
+            <p class="text-gray-400 text-sm">Electric</p>
           </div>
-          <div class="flex items-center gap-1 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">
-            <span class="text-rose-500 text-lg leading-none">❤️</span>
-            <span class="text-gray-700 font-medium like-count">72</span>
+          <div class="flex items-center gap-1 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm border border-white/10">
+            <span class="text-cyan-400 text-lg leading-none">❤️</span>
+            <span class="text-gray-200 font-medium like-count">152</span>
           </div>
         </div>
       </div>
 
-      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-105">
-        <img src="https://picsum.photos/500/800?random=4" alt="Animaux" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 group-hover:opacity-80 transition"></div>
+      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-slate-900 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-110">
+        <img src="https://picsum.photos/seed/car4/500/800" alt="Sport" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
         <div class="absolute bottom-0 w-full p-5 flex justify-between items-end">
           <div>
-            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow-sm">Regard sauvage</h3>
-            <p class="text-white/70 text-sm">Animaux</p>
+            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow">Porsche 911 Turbo S</h3>
+            <p class="text-gray-400 text-sm">Sport</p>
           </div>
-          <div class="flex items-center gap-1 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">
-            <span class="text-rose-500 text-lg leading-none">❤️</span>
-            <span class="text-gray-700 font-medium like-count">58</span>
+          <div class="flex items-center gap-1 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm border border-white/10">
+            <span class="text-cyan-400 text-lg leading-none">❤️</span>
+            <span class="text-gray-200 font-medium like-count">203</span>
           </div>
         </div>
       </div>
 
-      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-105">
-        <img src="https://picsum.photos/500/750?random=5" alt="Architecture" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 group-hover:opacity-80 transition"></div>
+      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-slate-900 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-110">
+        <img src="https://picsum.photos/seed/car5/500/750" alt="Luxury" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition"></div>
         <div class="absolute bottom-0 w-full p-5 flex justify-between items-end">
           <div>
-            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow-sm">Pont ancien</h3>
-            <p class="text-white/70 text-sm">Architecture</p>
+            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow">Rolls-Royce Ghost</h3>
+            <p class="text-gray-400 text-sm">Luxury</p>
           </div>
-          <div class="flex items-center gap-1 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">
-            <span class="text-rose-500 text-lg leading-none">❤️</span>
-            <span class="text-gray-700 font-medium like-count">210</span>
+          <div class="flex items-center gap-1 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm border border-white/10">
+            <span class="text-cyan-400 text-lg leading-none">❤️</span>
+            <span class="text-gray-200 font-medium like-count">310</span>
           </div>
         </div>
       </div>
 
-      <div class="group relative break-inside-avoid overflow-hidden rounded-3xl bg-white shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 hover:brightness-105">
-        <img src="https://picsum.photos/500/700?random=6" alt="Nature" class="w-full h-auto object-cover inline-block rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 ease-out" loading="lazy" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-70 group-hover:opacity-80 transition"></div>
-        <div class="absolute bottom-0 w-full p-5 flex justify-between items-end">
-          <div>
-            <h3 class="text-white font-semibold text-lg tracking-tight drop-shadow-sm">Sous-bois doré</h3>
-            <p class="text-white/70 text-sm">Nature</p>
-          </div>
-          <div class="flex items-center gap-1 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">
-            <span class="text-rose-500 text-lg leading-none">❤️</span>
-            <span class="text-gray-700 font-medium like-count">99</span>
-          </div>
-        </div>
-      </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="text-center text-gray-400 mt-20 pb-10">
-    <p>© 2025 Nebel, Lucas & Abdulrahman — All rights reserved.</p>
+  <footer class="text-center text-gray-500 mt-20 pb-10 border-t border-gray-800 pt-6">
+    <p>© 2025 Nebel, Lucas & Abdulrahman — AutoPulse Project. All rights reserved.</p>
   </footer>
 </body>
 </html>
